@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,13 +10,39 @@
 <body>
     <h1>Mi Web Personal</h1>
     <ul>
-        <li><a href="/">Portada</a></li>
-        <li><a href="/about/">Acerca de</a></li>
-        <li><a href="/portfolio/">Portafolio</a></li>
-        <li><a href="/contact/">Contacto</a></li>
+        <li><a href="{% url 'home' %}">Portada</a></li>
+        <li><a href="{% url 'about' %}">Acerca de</a></li>
+        <li><a href="{% url 'portfolio' %}">Portafolio</a></li>
+        <li><a href="{% url 'contact' %}">Contacto</a></li>
     </ul>
 
     {% block content %}{% endblock %}
 
 </body>
 </html>
+
+
+<!---
+<title>{% block title %}{% endblock %} | Juan Pérez(Ingeniero)</title>
+
+<div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Portada</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'about-me' %}">Acerca de</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'portfolio' %}">Portafolio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+        </li>
+    </ul>
+    {% block content %}{% endblock %}
+</div>
+
+<a class="navbar-brand" href="{% url 'home' %}">Juan Pérez</a>
+-->
+
