@@ -2,41 +2,43 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit-no">
 
-    <title>{% block title %}{% endblock %} | Enrique Marina (Ingeniero Matemático)</title>
+        <title>{% block title %}{% endblock %} | Enrique Marina (Ingeniero Matemático)</title>
 
-    <!-- Estilos y fuentes del template -->
-    {% load static %}
-    <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'core/js/clean-blog.min.js' %}"></script>
+        <!-- Estilos y fuentes del template -->
+        {% load static %}
 
-</head>
+        <!-- Bootstrap y Javascripts -->
+        <link href="{% static 'core/vendor/jquery/jquery.min.js' %}"></link>
+        <link href="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></link>
+        <link href="{% static 'core/js/clean-blog.min.js' %}"></link>
 
-<body>
-    <a class="navbar-brand" href="{% url 'home' %}">Enrique Marina</a>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">Portada</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}">Acerca de</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'portfolio' %}">Portafolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
-            </li>
-        </ul>
-        {% block content %}{% endblock %}
-    </div>
-</body>
+    </head>
+
+    <body>
+        <a class="navbar-brand" href="{% url 'home' %}">Enrique Marina</a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Portada</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'portfolio' %}">Portafolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+                </li>
+            </ul>
+            {% block content %}{% endblock %}
+        </div>
+    </body>
 </html>
 
 
