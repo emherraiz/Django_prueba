@@ -8,6 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %} | Enrique Marina (Ingeniero Matemático)</title>
 </head>
+
+{% load static %}
+
+<!-- Bootstrap y Javascripts 
+<script src="{% static 'core/vendor/jquery/jquery.min.js' 
+%}"></script>
+<script src="{% static 
+'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'core/js/clean-blog.min.js' %}"></script>
+-->
 <body>
     <a class="navbar-brand" href="{% url 'home' %}">Enrique Marina</a>
     <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -30,10 +40,4 @@
 </body>
 </html>
 
-
-<!---
-
-
-
--->
 
