@@ -1,48 +1,39 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %} | Mi Web Personal</title>
+    <title>{% block title %}{% endblock %} | Enrique Marina (Ingeniero Matemático)</title>
 </head>
 <body>
-    <h1>Mi Web Personal</h1>
-    <ul>
-        <li><a href="{% url 'home' %}">Portada</a></li>
-        <li><a href="{% url 'about' %}">Acerca de</a></li>
-        <li><a href="{% url 'portfolio' %}">Portafolio</a></li>
-        <li><a href="{% url 'contact' %}">Contacto</a></li>
-    </ul>
-
-    {% block content %}{% endblock %}
-
+    <a class="navbar-brand" href="{% url 'home' %}">Enrique Marina</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Portada</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">Acerca de</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'portfolio' %}">Portafolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+            </li>
+        </ul>
+        {% block content %}{% endblock %}
+    </div>
 </body>
 </html>
 
 
 <!---
-<title>{% block title %}{% endblock %} | Juan Pérez(Ingeniero)</title>
 
-<div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Portada</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'about-me' %}">Acerca de</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'portfolio' %}">Portafolio</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
-        </li>
-    </ul>
-    {% block content %}{% endblock %}
-</div>
 
-<a class="navbar-brand" href="{% url 'home' %}">Juan Pérez</a>
+
 -->
 
