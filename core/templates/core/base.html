@@ -6,18 +6,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{% block title %}{% endblock %} | Enrique Marina (Ingeniero Matemático)</title>
+
+    <!-- Estilos y fuentes del template -->
+    {% load static %}
+    <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'core/js/clean-blog.min.js' %}"></script>
+
 </head>
 
-{% load static %}
-
-<!-- Bootstrap y Javascripts 
-<script src="{% static 'core/vendor/jquery/jquery.min.js' 
-%}"></script>
-<script src="{% static 
-'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'core/js/clean-blog.min.js' %}"></script>
--->
 <body>
     <a class="navbar-brand" href="{% url 'home' %}">Enrique Marina</a>
     <div class="collapse navbar-collapse" id="navbarResponsive">
