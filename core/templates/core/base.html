@@ -12,10 +12,7 @@
         <!-- Estilos y fuentes del template -->
         {% load static %}
 
-        <!-- Bootstrap y Javascripts -->
-        <link href="{% static 'core/vendor/jquery/jquery.min.js' %}"></link>
-        <link href="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></link>
-        <link href="{% static 'core/js/clean-blog.min.js' %}"></link>
+
 
     </head>
 
@@ -38,6 +35,11 @@
             </ul>
             {% block content %}{% endblock %}
         </div>
+
+        <!-- Bootstrap y Javascripts -->
+        <script src="{% static 'js/bootstrapcore/vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'core/js/clean-blog.min.js' %}"></script>
     </body>
 </html>
 
