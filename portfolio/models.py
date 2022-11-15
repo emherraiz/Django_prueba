@@ -6,7 +6,7 @@ class Project(models.Model):
 
     description = models.TextField(verbose_name="Descripción")
 
-    image = models.ImageField(upload_to="projects", verbose_name="Imagen")
+    image = models.ImageField(verbose_name="Imagen", upload_to="projects")
 
     link = models.URLField(null=True, blank=True, verbose_name="Dirección Web")
 
